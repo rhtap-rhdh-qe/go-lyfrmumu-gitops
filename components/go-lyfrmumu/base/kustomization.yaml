@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-lyfrmumu
+  janus-idp.io/tekton: go-lyfrmumu
+  backstage.io/kubernetes-id: go-lyfrmumu
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-lyfrmumu
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
